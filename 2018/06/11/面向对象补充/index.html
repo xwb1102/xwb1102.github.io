@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="前面对面向对象已经做过一些说明了， 现在做一些补充。">
+    <meta name="description" content="&amp;emsp;&amp;emsp;前面对面向对象已经做过一些说明了， 现在做一些补充。new 函数运算符，加或者不加括号都会运算，加括号是为了传参，构造函数中的this指向他的实例化对象。默认返回构造函数的实例化对象,默认return对象。强行改变，如果你改变的内容不是复杂数据类型，则还是返回原来的东西，所以想强行改变 return后面得加复杂数据类型，这样这个构造函数返回就的是你添加的东西，构造函数返回">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向对象补充">
 <meta property="og:url" content="http://yoursite.com/2018/06/11/面向对象补充/index.html">
 <meta property="og:site_name" content="xwb">
-<meta property="og:description" content="前面对面向对象已经做过一些说明了， 现在做一些补充。">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;前面对面向对象已经做过一些说明了， 现在做一些补充。new 函数运算符，加或者不加括号都会运算，加括号是为了传参，构造函数中的this指向他的实例化对象。默认返回构造函数的实例化对象,默认return对象。强行改变，如果你改变的内容不是复杂数据类型，则还是返回原来的东西，所以想强行改变 return后面得加复杂数据类型，这样这个构造函数返回就的是你添加的东西，构造函数返回">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T01:52:51.904Z">
+<meta property="og:updated_time" content="2018-06-11T14:11:46.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象补充">
-<meta name="twitter:description" content="前面对面向对象已经做过一些说明了， 现在做一些补充。">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;前面对面向对象已经做过一些说明了， 现在做一些补充。new 函数运算符，加或者不加括号都会运算，加括号是为了传参，构造函数中的this指向他的实例化对象。默认返回构造函数的实例化对象,默认return对象。强行改变，如果你改变的内容不是复杂数据类型，则还是返回原来的东西，所以想强行改变 return后面得加复杂数据类型，这样这个构造函数返回就的是你添加的东西，构造函数返回">
     
     
         
@@ -164,7 +164,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>前面对面向对象已经做过一些说明了， 现在做一些补充。</p>
+    <p> &emsp;&emsp;前面对面向对象已经做过一些说明了， 现在做一些补充。<br>new 函数运算符，加或者不加括号都会运算，加括号是为了传参，构造函数中的this指向他的实例化对象。<br>默认返回构造函数的实例化对象,默认return对象。<br>强行改变，如果你改变的内容不是复杂数据类型，则还是返回原来的东西，所以想强行改变 return后面得加复杂数据类型，这样这个构造函数返回就的是你添加的东西，构造函数返回的内容，也就是实例化对象的内容。<br>prototype原型，这个意思是，当创建一个函数的时候，自身带的属性，对于方法的运用寻找，是先找实例化对象上有没有，再找构造函数身上有没有，最后找原型上有没有，如果都没有则会报错，实例化对象的原型链等于构造函数的原型。<br>构造函数的原型下的属性或者方法，只给他的实例化对象用。<br>实例化对象生成的时候，相当于将构造函数的内容赋值了一份给自己，所以调用方法的时候，寻找链应该是这样的，先找自己，自己没有，再找自己赋值的那份，在没有就通过原型链找到构造函数的原型，在没有就继续往上找。<br>构造函数找方法的时候，先找function，如果没有，就找object。<br>实例化对象， 找方法的时候，最高找object不找function，就算function有也不找。<br>面向对象，把具有相同特征的代码抽离出来归为一类，把描述细节的内容放在这个类的原型下的一种编程思想。</p>
 
   </div>
 </article>

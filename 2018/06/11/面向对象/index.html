@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="首先面向对象有三个方法：抽象、封装、继承 继承有两种：       &amp;emsp;&amp;emsp; 拷贝继承       &amp;emsp;&amp;emsp; 属性继承-》        &amp;emsp;&amp;emsp;        类似继承：把父类放到子类下       &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; 方法继承-》       &amp;emsp;&amp;emsp;         遍历父级的原型下的方法并且赋值给">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象">
+<meta property="og:url" content="http://yoursite.com/2018/06/11/面向对象/index.html">
+<meta property="og:site_name" content="xwb">
+<meta property="og:description" content="首先面向对象有三个方法：抽象、封装、继承 继承有两种：       &amp;emsp;&amp;emsp; 拷贝继承       &amp;emsp;&amp;emsp; 属性继承-》        &amp;emsp;&amp;emsp;        类似继承：把父类放到子类下       &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; 方法继承-》       &amp;emsp;&amp;emsp;         遍历父级的原型下的方法并且赋值给">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-11T01:18:24.839Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面向对象">
+<meta name="twitter:description" content="首先面向对象有三个方法：抽象、封装、继承 继承有两种：       &amp;emsp;&amp;emsp; 拷贝继承       &amp;emsp;&amp;emsp; 属性继承-》        &amp;emsp;&amp;emsp;        类似继承：把父类放到子类下       &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; 方法继承-》       &amp;emsp;&amp;emsp;         遍历父级的原型下的方法并且赋值给">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>面向对象</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">xwb</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="https://xwb1102.github.io/">Home</a></li>
+         
+          <li><a href="https://xwb1102.github.io/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://xwb1102.github.io/">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/06/11/blog/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/06/11/面向对象/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/06/11/面向对象/&text=面向对象"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/06/11/面向对象/&title=面向对象"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/06/11/面向对象/&is_video=false&description=面向对象"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=面向对象&body=Check out this article: http://yoursite.com/2018/06/11/面向对象/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/06/11/面向对象/&title=面向对象"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/06/11/面向对象/&title=面向对象"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/06/11/面向对象/&title=面向对象"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/06/11/面向对象/&title=面向对象"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/06/11/面向对象/&name=面向对象&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        面向对象
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">xwb</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-06-11T01:17:21.422Z" itemprop="datePublished">2018-06-11</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>首先面向对象有三个方法：抽象、封装、继承</p>
+<p>继承有两种：<br>       &emsp;&emsp; 拷贝继承<br>       &emsp;&emsp; 属性继承-》<br>        &emsp;&emsp;        类似继承：把父类放到子类下<br>       &emsp;&emsp;&emsp;&emsp; 方法继承-》<br>       &emsp;&emsp;         遍历父级的原型下的方法并且赋值给子类的原型</p>
+<p>&emsp;&emsp;  原型继承<br>一、拷贝继承的使用<br>  &emsp;&emsp;  首先，需要将属性拷贝下来，就是在新的构造函数里面，执行一下，需&emsp;&emsp;要拷贝，并且是改变了this指向的原构造函数，这个函数的指向指着新的函&emsp;&emsp;数，这样就可以将属性给拷贝过来了。<br>  &emsp;&emsp;  其次，方法的拷贝。方法的拷贝，有以下几种方法：<br>1、对原构造函数进行for in ；就是将原构造函数的prototype给in给新的构造函数的prototype。<br>这里需要注意，就是，for in的时候，需要判断一下，传给新的构造函数的方法是不是原构造函数自身的东西，只有是他自身的，才给他放进去。<br>2、Object.assingn(Drag2.prototype,Drag.prototype)<br>使用浅拷贝的方式进行拷贝一份，注意，只能拷贝表层<br>3、Drag2.prototype = {…Drag.prototype,Drag.prototype,constructor:Drag2}<br>使用…的方式，将原构造函数展开，当然，因为这个是对象，所以，对象会将自己的构造函数也传给了Drag2，所以，对象里面需要设置一下，constructor:Drag2，将指针改正<br>       &emsp;&emsp;&emsp;&emsp; 这样就可以完成拷贝了，接下来就进行其他需要的操作即可；<br>二、原型拷贝<br>    &emsp;&emsp;首先属性拷贝和属性拷贝是一样执行的<br>不一样的在于，方法的拷贝<br>原型拷贝，方法拷贝有以下几种方法：<br>   &emsp;&emsp; 1、声明一个第三者，让原构造函数的prototype赋给新声明第三者的第三者的prototype，然后给第三者声明一个实例化对象将这个实例化对象赋给新构造函数的prototype；这样就完成了方法的拷贝。<br>// function Paohui(){}<br>// // Paohui.prototype = Drag.prototype;<br>// let ph = new Paohui;<br>// Drag2.prototype = ph;</p>
+<p>   &emsp;&emsp; 2、使用object.create();  如：<br>let ph = Object.create(Drag.prototype);<br>ph.constructor = Drag2;<br>Drag2.prototype = ph;<br>这样也可以完成方法的拷贝。</p>
+
+  </div>
+</article>
+
+
+
+      </div>
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="https://xwb1102.github.io/">Home</a></li>
+         
+          <li><a href="https://xwb1102.github.io/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://xwb1102.github.io/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/06/11/面向对象/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/06/11/面向对象/&text=面向对象"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/06/11/面向对象/&title=面向对象"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/06/11/面向对象/&is_video=false&description=面向对象"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=面向对象&body=Check out this article: http://yoursite.com/2018/06/11/面向对象/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/06/11/面向对象/&title=面向对象"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/06/11/面向对象/&title=面向对象"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/06/11/面向对象/&title=面向对象"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/06/11/面向对象/&title=面向对象"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/06/11/面向对象/&name=面向对象&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 XuWeiBei
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="https://xwb1102.github.io/">Home</a></li>
+         
+          <li><a href="https://xwb1102.github.io/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://xwb1102.github.io/">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+    </div>
+</body>
+</html>

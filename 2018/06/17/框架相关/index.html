@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="xwb">
 <meta property="og:description" content="一、import和export；&amp;emsp;&amp;emsp;import为引入，export为导出。引入的格式和导出的格式是有联系的。&amp;emsp;&amp;emsp;如果导出时是，export {Fn}的形式或export function Fn（）{}的形式，则引入时是，import {Fn}的形式来引入。&amp;emsp;&amp;emsp;导出为，export default function Fn(){} 的形式，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-17T13:41:53.302Z">
+<meta property="og:updated_time" content="2018-06-17T16:02:37.026Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="框架相关">
 <meta name="twitter:description" content="一、import和export；&amp;emsp;&amp;emsp;import为引入，export为导出。引入的格式和导出的格式是有联系的。&amp;emsp;&amp;emsp;如果导出时是，export {Fn}的形式或export function Fn（）{}的形式，则引入时是，import {Fn}的形式来引入。&amp;emsp;&amp;emsp;导出为，export default function Fn(){} 的形式，">
@@ -166,7 +166,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>一、import和export；<br>&emsp;&emsp;import为引入，export为导出。引入的格式和导出的格式是有联系的。<br>&emsp;&emsp;如果导出时是，export {Fn}的形式或export function Fn（）{}的形式，则引入时是，import {Fn}的形式来引入。<br>&emsp;&emsp;导出为，export default function Fn(){} 的形式，则引入的时候，就不能加括号。import Fn；<br>&emsp;&emsp;区别的话在于导出的时候，有无default。有就不需要加括号引入，没有就需要。<br>&emsp;&emsp;如果子组件有多个需要导出，如：export default function Fn(){}  和  export {Num}；则引入的时候，需import &emsp;&emsp;fn，{num} 可以同时引入两个<br>二、as是更换名字的<br>&emsp;&emsp;如export {fn as nf};<br>三、JSX语法<br>&emsp;&emsp;JSX语法就是在react内部使用的一种语法，也就是，return后面带的那些内容：遵循以下规则：1.只能有一个顶层标签；2.&emsp;&emsp;所有的class都要写成className；3.里面需要写js代码的时候，只需加上{}就可以在里面写js代码了。4、单标签必结<br>&emsp;&emsp;束标签，如<input>斜杆必加。<br>四、受控组件<br>&emsp;&emsp;当input添加了value的时候，就变成了受控组件，这时输入框中的内容就被锁定了。只有通过数据渲染才能改变。这时要<br>&emsp;&emsp;加onChange事件，否则会报错。<br>五、声明一个类。<br>&emsp;&emsp;也就是组件的形成，命名的时候，首字母必须大写；<br>&emsp;&emsp;传递数据通过属性来传递，通过this.props去接收；<br>&emsp;&emsp;在循环中必须加key，为了优化。<br>六、所使用的文件，是src下index.js的文件，相关配置或者说最顶层配置都是在进行的，是所有子组件的父级。</p>
+    <p>一、import和export；<br>&emsp;&emsp;import为引入，export为导出。引入的格式和导出的格式是有联系的。<br>&emsp;&emsp;如果导出时是，export {Fn}的形式或export function Fn（）{}的形式，则引入时是，import {Fn}的形式来引入。<br>&emsp;&emsp;导出为，export default function Fn(){} 的形式，则引入的时候，就不能加括号。import Fn；<br>&emsp;&emsp;区别的话在于导出的时候，有无default。有就不需要加括号引入，没有就需要。<br>&emsp;&emsp;如果子组件有多个需要导出，如：export default function Fn(){}  和  export {Num}；则引入的时候，需import &emsp;&emsp;fn，{num} 可以同时引入两个<br>二、as是更换名字的<br>&emsp;&emsp;如export {fn as nf};<br>三、JSX语法<br>&emsp;&emsp;JSX语法就是在react内部使用的一种语法，也就是，return后面带的那些内容：遵循以下规则：1.只能有一个顶层标签；2.&emsp;&emsp;所有的class都要写成className；3.里面需要写js代码的时候，只需加上{}就可以在里面写js代码了。<br>4、单标签必加束标签，如&lt; input /&gt;斜杆必加。<br>四、受控组件<br>&emsp;&emsp;当input添加了value的时候，就变成了受控组件，这时输入框中的内容就被锁定了。只有通过数据渲染才能改变。这时要<br>&emsp;&emsp;加onChange事件，否则会报错。<br>五、声明一个类。<br>&emsp;&emsp;也就是组件的形成，命名的时候，首字母必须大写；<br>&emsp;&emsp;传递数据通过属性来传递，通过this.props去接收；<br>&emsp;&emsp;在循环中必须加key，为了优化。<br>六、所使用的文件，是src下index.js的文件，相关配置或者说最顶层配置都是在进行的，是所有子组件的父级。</p>
 
   </div>
 </article>
